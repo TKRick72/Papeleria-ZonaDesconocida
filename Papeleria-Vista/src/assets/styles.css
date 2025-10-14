@@ -1,0 +1,26 @@
+/* Estilo para que la navbar se mantenga fija en la parte superior */
+.navbar-fixed-top {
+  position: sticky;
+  top: 0;
+  z-index: 1030; 
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* Estilo básico para el carrito desplegable*/
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px; /* Ancho del carrito */
+  height: 100vh;
+  background-color: white;
+  z-index: 1040; /* Más alto que la navbar */
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cart-sidebar.is-visible {
+  transform: translateX(0);
+}
